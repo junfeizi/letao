@@ -1,0 +1,132 @@
+/*定义变量*/
+@baseColor : #006699;
+/*公共样式*/
+body{
+  background-color: #fff;
+}
+.mui-content{
+  background-color: #fff;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+/*头部导航*/
+.my-header{
+  background-color: @baseColor;
+  > h1{
+    color: #fff;
+  }
+  > a{
+    color: #fff;
+  }
+}
+/*底部样式*/
+.my-footer{
+  background-color: @baseColor;
+  > .mui-tab-item{
+    color: #fff;
+  }
+  > .mui-tab-item.mui-active{
+    color: darkorange;
+  }
+}
+/*导航链接*/
+.nav-links{
+  padding: 10px;
+  //overflow: hidden;
+  > a{
+    float: left;
+    width: 33.333%;
+    > img{
+      width: 100%;
+      display: block;
+      /*vertical-align:top;*/
+    }
+  }
+}
+/*品牌专区*/
+.brand{
+  padding: 10px;
+  > .title{
+    width: 100%;
+  }
+  > ul{
+    width: 100%;
+    padding: 10px 0;
+    > li{
+      width: 25%;
+      float: left;
+      > a{
+        display: block;
+        > img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+/*专栏样式*/
+.product{
+  > .title{
+    width: 100%;
+  }
+  >ul {
+    padding: 5px 0;
+    > li{
+      padding: 5px;
+      float: left;
+      width: 50%;
+      > a{
+        display: block;
+        box-shadow: 0 0 5px #ccc;
+        padding: 5px;
+        > img{
+          width: 100%;
+        }
+         .name{
+           display: block;
+           color: #8f8f94;
+           font-size: 14px;
+           text-align: center;
+           height: 40px;
+           line-height: 18px;
+           overflow: hidden;
+           padding: 5px;
+         }
+        > p{
+          text-align: center;
+          padding-top: 5px;
+          > span:first-child{
+            color: #f20;
+          }
+          > span:last-child{
+            text-decoration: line-through;
+            font-size: 12px;
+            padding: 5px;
+          }
+        }
+        > .buy-now{
+          width: 80px;
+          height: 30px;
+          line-height: 30px;
+          display: block;
+          text-align: center;
+          color: #fff;
+          font-size: 14px;
+          background-color: @baseColor;
+          border-radius: 4px;
+          margin: 0 auto 5px auto;
+        }
+      }
+
+    }
+  }
+}
+
+
+
