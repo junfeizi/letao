@@ -1,0 +1,92 @@
+/*定义变量*/
+@baseColor : #006699;
+/*公共样式*/
+body{
+  background-color: #f5f5f5;
+}
+.my-content{
+  background-color: #f5f5f5;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  color: #000;
+}
+/*头部导航*/
+.my-header{
+  background-color: @baseColor;
+  > h1{
+    color: #fff;
+  }
+  > a{
+    color: #fff;
+  }
+}
+/*底部样式*/
+.my-footer{
+  background-color: @baseColor;
+  > .mui-tab-item{
+    color: #fff;
+  }
+  > .mui-tab-item.mui-active{
+    color: darkorange;
+  }
+}
+
+.my-content{
+  position: absolute;
+  left: 0;
+  top: 44px;
+  bottom: 50px;
+  width: 100%;
+  > .category-left{
+    position: relative;
+    float: left;
+    width: 80px;
+    height: 100%;
+
+    .links{
+      background-color: #fff;
+      > a{
+        display: block;
+        width: 80px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        font-size: 14px;
+        border-bottom: 1px solid #E0E0E0;
+        border-right: 1px solid #E0E0E0;
+      }
+      > .active{
+        background-color: #f5f5f5;
+        border-right: none;
+      }
+    }
+  }
+  > .category-right{
+    margin-left: 90px;
+    height: 100%;
+    position: relative;
+    .brand-list{
+      margin-top: 10px;
+      background-color: #fff;
+      > li{
+        width: 33.333%;
+        float: left;
+        > a{
+          display: block;
+          width: 100%;
+          > img{
+            width: 100%;
+          }
+          > p{
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

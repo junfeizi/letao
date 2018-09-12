@@ -1,0 +1,89 @@
+/*�������*/
+/*������ʽ*/
+body {
+  background-color: #f5f5f5;
+}
+.my-content {
+  background-color: #f5f5f5;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: #000;
+}
+/*ͷ������*/
+.my-header {
+  background-color: #006699;
+}
+.my-header > h1 {
+  color: #fff;
+}
+.my-header > a {
+  color: #fff;
+}
+/*�ײ���ʽ*/
+.my-footer {
+  background-color: #006699;
+}
+.my-footer > .mui-tab-item {
+  color: #fff;
+}
+.my-footer > .mui-tab-item.mui-active {
+  color: darkorange;
+}
+.my-content {
+  position: absolute;
+  left: 0;
+  top: 44px;
+  bottom: 50px;
+  width: 100%;
+}
+.my-content > .category-left {
+  position: relative;
+  float: left;
+  width: 80px;
+  height: 100%;
+}
+.my-content > .category-left .links {
+  background-color: #fff;
+}
+.my-content > .category-left .links > a {
+  display: block;
+  width: 80px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #E0E0E0;
+  border-right: 1px solid #E0E0E0;
+}
+.my-content > .category-left .links > .active {
+  background-color: #f5f5f5;
+  border-right: none;
+}
+.my-content > .category-right {
+  margin-left: 90px;
+  height: 100%;
+  position: relative;
+}
+.my-content > .category-right .brand-list {
+  margin-top: 10px;
+  background-color: #fff;
+}
+.my-content > .category-right .brand-list > li {
+  width: 33.333%;
+  float: left;
+}
+.my-content > .category-right .brand-list > li > a {
+  display: block;
+  width: 100%;
+}
+.my-content > .category-right .brand-list > li > a > img {
+  width: 100%;
+}
+.my-content > .category-right .brand-list > li > a > p {
+  text-align: center;
+}
