@@ -8,13 +8,13 @@
 	<link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="css/category.css">
 	<script src="assets/zepto/zepto.min.js"></script>
-	<script src="assets/artTemplate/template-native.js"></script>
+	<script src="assets/artTemplate/template-web.js"></script>
 	<script src="assets/mui/js/mui.min.js"></script>
-	<script src="js/index.js"></script>
+	<script src="js/category.js"></script>
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav my-header">
-		<h1 class="mui-title">乐淘云购</h1>
+		<h1 class="mui-title">搜索中心</h1>
 		<a class="mui-icon mui-icon-search mui-pull-right"></a>
 	</header>
 	<nav class="mui-bar mui-bar-tab my-footer">
@@ -40,32 +40,7 @@
 			<div class="mui-scroll-wrapper">
 				<div class="mui-scroll">
 					<div class="links">
-						<a href="javascript:;" class="active">运动馆</a>
-						<a href="javascript:;">男士馆</a>
-						<a href="javascript:;">女士馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
-						<a href="javascript:;">户外馆</a>
+						<!--一级分类坑-->
 					</div>
 				</div>
 			</div>
@@ -74,40 +49,30 @@
 			<div class="mui-scroll-wrapper">
 				<div class="mui-scroll">
 					<ul class="brand-list mui-clearfix">
-						<li>
-							<a href="javascript:;">
-								<img src="images/brand1.png" alt=""/>
-								<p>耐克</p>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<img src="images/brand2.png" alt=""/>
-								<p>耐克</p>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<img src="images/brand3.png" alt=""/>
-								<p>耐克</p>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<img src="images/brand4.png" alt=""/>
-								<p>耐克</p>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<img src="images/brand5.png" alt=""/>
-								<p>耐克</p>
-							</a>
-						</li>
+						<!--二级分类坑-->
+
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
+
+
+	<script type="text/template" id="categoryFirst">
+		{{each data}}
+		<a href="javascript:;" data-id="{{$value.id}}">{{$value.categoryName}}</a>
+		{{/each}}
+	</script>
+
+	<script type="text/template" id="categorySecond">
+		{{each data}}
+		<li>
+			<a href="javascript:;">
+				<img src="{{$value.brandLogo}}" alt=""/>
+				<p>{{$value.brandName}}</p>
+			</a>
+		</li>
+		{{/each}}
+	</script>
 </body>
 </html>
