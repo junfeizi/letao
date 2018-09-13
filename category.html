@@ -72,6 +72,9 @@
 				<p>{{$value.brandName}}</p>
 			</a>
 		</li>
+		{{if($value == '')}}
+		<div> 暂无数据</div>
+		{{/if}}
 		{{/each}}
 	</script>
 </body>
