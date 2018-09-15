@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="assets/mui/css/mui.min.css">
     <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/search-result.css">
-    <script src="assets/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="css/user.css"/>
     <script src="assets/zepto/zepto.min.js"></script>
     <script src="assets/artTemplate/template-web.js"></script>
-    <script src="./js/search-result.js"></script>
+    <script src="assets/mui/js/mui.min.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/user.js"></script>
 </head>
 <body>
 <header class="mui-bar mui-bar-nav my-header">
-    <h1 class="mui-title">搜索结果</h1>
-    <a href="search.html" class="mui-icon mui-icon-back mui-pull-left"></a>
+    <h1 class="mui-title">会员中心</h1>
+    <a class="mui-icon mui-icon-search mui-pull-right" href="search.html"></a>
 </header>
 <nav class="mui-bar mui-bar-tab my-footer">
     <a class="mui-tab-item" href="index.html">
@@ -32,47 +32,41 @@
         <span class="mui-icon fa fa-shopping-cart"></span>
         <span class="mui-tab-label">购物车</span>
     </a>
-    <a class="mui-tab-item" href="user.html">
+    <a class="mui-tab-item mui-active" href="user.html">
         <span class="mui-icon mui-icon-person"></span>
         <span class="mui-tab-label">会员中心</span>
     </a>
 </nav>
-<div class="mui-content" id="refreshContainer">
-    <div>
-        <div class="mui-row filter">
-            <div class="mui-col-xs-6" id="priceSort">
-                价格
-                <span class="mui-icon mui-icon-arrowdown"></span>
-            </div>
-            <div class="mui-col-xs-6" id="numSort">
-                销量
-                <span class="mui-icon mui-icon-arrowdown"></span>
-            </div>
-        </div>
-        <div class="product">
-            <ul class="mui-clearfix" id="search-box">
-                <!--商品详情坑-->
-            </ul>
-        </div>
-    </div>
+<div class="mui-content">
+    <ul class="mui-table-view" id="userInfoBox">
+        <!--用户信息坑-->
+    </ul>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right" href="">修改密码</a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">我的购物车</a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">收货地址管理</a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-text-center" id="logout" href="login.html">退出登录</a>
+        </li>
+    </ul>
 </div>
 
-<script type="text/template" id="searchTpl">
-    {{each data}}
-    <li>
-        <a href="#">
-            <img src="{{$value.pic[0].picAddr}}">
-						<span class="name">
-							{{$value.proName}}
-						</span>
-            <p>
-                <span>{{$value.price}}</span>
-                <span>{{$value.oldPrice}}</span>
-            </p>
-            <span class="buy-now">立即购买</span>
+<script type="text/template" id="userInfo">
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="images/user.jpg">
+            <div class="mui-media-body">
+                <%=mobile %>
+                <p class='mui-ellipsis'>账号:<%=username %></p>
+            </div>
         </a>
     </li>
-    {{/each}}
 </script>
 </body>
 </html>
