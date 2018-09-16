@@ -13,3 +13,6 @@
   font-size: 14px;
   color: #006699;
 }
+.mui-input-row > label {
+  font-size: 14px;
+}
