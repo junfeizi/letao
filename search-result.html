@@ -11,8 +11,9 @@
     <script src="assets/mui/js/mui.min.js"></script>
     <script src="assets/zepto/zepto.min.js"></script>
     <script src="assets/artTemplate/template-web.js"></script>
-    <script src="./js/search-result.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/search-result.js"></script>
+
 </head>
 <body>
 <header class="mui-bar mui-bar-nav my-header">
@@ -60,11 +61,11 @@
 <script type="text/template" id="searchTpl">
     {{each data}}
     <li>
-        <a href="#">
+        <a href="detali.html?id={{$value.id}}">
             <img src="{{$value.pic[0].picAddr}}">
 						<span class="name">
 							{{$value.proName}}
-						</span>
+				 		</span>
             <p>
                 <span>{{$value.price}}</span>
                 <span>{{$value.oldPrice}}</span>
